@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: linear-gradient(45deg, #58B368, #333);
+        padding: 10px;
+        color: white;
+        position: sticky;
+        top: 0;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+    }
+
+    .nav-links li {
+        flex: 1;
+        text-align: center;
+        position: relative;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+    }
+
+    .nav-links a:hover {
+        background-color: #575757;
+        transition: background-color 0.3s;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-image: linear-gradient(45deg, #58B368, #333);
+        width: 100%;
+        text-align: left;
+        z-index: 1;
+        list-style: none;
+    }
+
+    .dropdown-content li {
+        width: 100%;
+    }
+
+    .dropdown-content a {
+        padding: 10px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .search-input {
+        padding: 5px;
+        border: none;
+        border-radius: 3px;
+        width: 0;
+        opacity: 0;
+        transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .search-button {
+        padding: 5px 10px;
+        border: none;
+        background-color: #575757;
+        color: white;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .search-container:hover .search-input {
+        width: 150px;
+        opacity: 1;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px;
+    }
+
+    .gallery img {
+        margin: 10px;
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+    }
+
+    .card {
+        width: 300px;
+        border: 2px solid #fff;
+        background-color: #fcf8ec;
+        border-radius: 5px;
+        margin: 10px;
+        padding: 10px;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .card-content {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Number of lines to show */
+        -webkit-box-orient: vertical;
+        flex-grow: 1;
+    }
+
+    .card-link {
+        text-align: right;
+        margin-top: 10px;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        width: 100%;
+        bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+        }
+
+        .nav-links {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav-links li {
+            width: 100%;
+            text-align: center;
+        }
+
+        .search-container {
+            margin-top: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        nav {
+            flex-direction: column;
+        }
+
+        .nav-links {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav-links li {
+            width: 100%;
+            text-align: center;
+        }
+
+        .search-container {
+            margin-top: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="places.html">Places</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a href="contact.html">Contact</a>
+                <ul class="dropdown-content">
+                    <li><a href="manish.html">Manish Ghimire</a></li>
+                    <li><a href="nabina.html">Sita Karki</a></li>
+                    <li><a href="binod.html">Binod Chaudhary</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-input">
+            <button class="search-button">Search</button>
+        </div>
+    </nav>
+    
+    <div class="gallery">
+
+
+        <div class="card">
+           <a href="syambhu.html"> <img src="img/syambhu.png" alt="Swyambhunath Temple"></a>
+            <div class="card-content">
+                <p>  <b> Swayambhunath</b> is famous for different names all over the world. People call it <b>Swoyambhu, Swayambhunath Temple, Swayambhunath Stupa, or Swoyambhu Mahachaitya.</b> This temple lies in the capital city of <b>Nepal, Kathmandu.</b> Also, people name this place Monkey Temple.</p>
+            </div>
+            <a href="syambhu.html" class="card-link">See More</a>
+        </div>
+
+
+
+        <div class="card">
+          <a href="boudha.html"> <img src="img/boudha-stupa.png" alt="Boudha Temple"></a>
+            <div class="card-content">
+                <p>
+     <b> Boudha Stupa</b> is famous for different names in Nepal, Tibet, and worldwide. This place is commonly known as <b>Boudhanath, Boudha Stupa, Khasti Chaitya, or Khasa Chaitya.</b> Additionally, this stupa is located in Kathmandu, Nepal. It is a significant pilgrimage site for Hindu and Buddhist pilgrims. This stupa is famous not only in Nepal but all over the world. </p>
+            </div>
+            <a href="boudha.html" class="card-link">See More</a>
+        </div>
+
+
+
+        <div class="card">
+            <a href="kalinchowk.html"> <img src="img/kalinchowk-village.png" alt="Kalinchowk Temple"></a>
+            <div class="card-content">
+               <p>
+     <b> Kalinchowk</b> is a popular tourist destination located in the <b>Dolakha district</b> of the eastern hilly region of Nepal. The name comes from two words, <b>Kali</b> and <b>Chowk</b>. The first word <b>“Kali”</b> is a <b>“Hindu goddess”</b>, and the second word, <b>"Chowk”</b>, means <b>“a flat area”</b>. Thus, Kalinchowk means a flat area where the Hindu goddess Kali is worshipped.</p>
+            </div>
+            <a href="Kalinchowk.html" class="card-link">See More</a>
+        </div>
+
+
+        <div class="card">
+             <a href="Mahalaxmi Temple.html"> <img src="img/shree.png" alt="Mahalaxmi Temple"></a>
+            <div class="card-content">               
+     <p><b> Shree Pancha Mahalaxmi Temple</b> is a Hindu Temple that lies in <b>Telkot, Changunarayan Municipality, Bhaktapur</b>. This temple is dedicated to Goddess Laxmi. In the Hindu religion, <b>Goddess Laxmi</b> is worshipped as a <b>Goddess of Wealth</b>.</p>
+            </div>
+            <a href="Mahalaxmi Temple.html" class="card-link">See More</a>
+        </div>
+
+
+
+        <div class="card">
+             <a href="Panch Pokhari.html"> <img src="img/panchpokhari.png" alt="Panch Pokhari Temple"></a>
+            <div class="card-content">
+                <p>
+     <b> Pancha Pokhari</b> is a beautiful place that lies in the Himalayas of <b>Sindhupalchok District</b>. Located at an altitude of approximately 4100 meters from sea level, this is a holy place for Hindu people.</p>
+            </div>
+            <a href="Panch Pokhari.html" class="card-link">See More</a>
+        </div>
+
+
+
+        <div class="card">
+             <a href="Panchakot Dham.html"> <img src="img/panchakot-dham.png" alt="Panchakot Dham"></a>
+            <div class="card-content">
+     <p><b> Panchakot Dham</b> is a sacred place popular in culture, religion, and spiritual significance. This place lies in <b>Baglung Municipality</b> in the <b>Baglung district</b> of Nepal. Moreover, located at a height of 1700 meters, Panchakot Dham is a temple complex</p>
+            </div>
+            <a href="Panchakot Dham.html" class="card-link">See More</a>
+        </div>
+
+
+
+        <div class="card">
+             <a href="Sali Nadi Temple.html"> <img src="img/sali-nadi-temple.png" alt="Sali Nadi Temple"></a>
+            <div class="card-content"> <p>
+     <b> Sali Nadi Temple</b> is a famous Swasthani Mata Temple that lies in Sakhu. This temple area is the origin of the famous Manohara River of Kathmandu that afterward mixes with the holy Bagmati River. Likewise, this place lies in Shankharapur Municipality in the Kathmandu district of Nepal.</p>
+            </div>
+            <a href="Sali Nadi Temple.html" class="card-link">See More</a>
+        </div>
+
+
+        <div class="card">
+             <a href="Kitchakbad.html"> <img src="img/kichakbadh-temple.png" alt="Kitchakbad Temple"></a>
+            <div class="card-content">
+                 <p>
+   <b> Kichakbadh Temple</b>, a place in<b> Prithivinagar, Jhapa</b> has great religious and historical
+    importance. This place lies in<b> Bhadrapur Municipality – 2, Jhapa, Nepal. </b>Kichakbadh
+    stretches on land approximately more than 10 bighas (25084 square meters).</p>
+            </div>
+            <a href="Kitchakbad.html" class="card-link">See More</a>
+        </div>
+
+        <div class="card">
+             <a href="Dodhara Chandani.html"> <img src="img/dodhara-chandani-bridge.png" alt="dodhara-chandani-bridge"></a>
+            <div class="card-content">
+        <p>
+     <b> Dodhara Chandani</b> is the longest multi-span pedestrian suspension bridge in Nepal. This bridge is over the Mahakali River or the Sarda River. Similarly, this bridge lies in the Bhimdatta Municipality in the Kanchanpur District of Nepal.</p>
+            </div>
+            <a href="Dodhara Chandani.html" class="card-link">See More</a>
+        </div>
+
+        <div class="card">
+             <a href="Jhor Waterfall.html"> <img src="img/Jhor.png" alt="Picture of Jhor Waterfall"></a>
+            <div class="card-content">
+       <p>
+      Are you looking for a quick escape this summer? If yes then Jhor Waterfall is the destination. <b>Jhor Waterfall</b> is a natural waterfall that lies in <b>Tokha, Kathmandu</b>. Moreover, the waterfall is on the northern side of the <b>Kathmandu Valley</b>. The Waterfall is surrounded by beautiful</p>
+            </div>
+            <a href="Jhor Waterfall.html" class="card-link">See More</a>
+        </div>
+
+
+         <div class="card">
+             <a href="dakchin.html"> <img src="img/dakshinkali-temple.png" alt="Picture of Dakchinkali Temple"></a>
+            <div class="card-content">
+         <p>
+   <b>Dakshinkali Temple</b> is famous by other names as well such as<b> Dakshin Kali Temple</b>
+   or Dakshina Kali Temple. This temple is a significant Hindu temple dedicated to Goddess Kali.</p>
+            </div>
+            <a href="Jhor Waterfall.html" class="card-link">See More</a>
+        </div>
+
+
+
+
+        
+        <!-- Add more cards as needed -->
+    </div>
+
+    <footer>
+        <p>&copy; Group 5. All right reserved</p>
+        <a href="#top" class="fas fa-arrow-circle-up" style="font-size: 24px; color: red;"></a>
+    </footer>
+</body>
+</html>

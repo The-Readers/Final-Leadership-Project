@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Photo Gallery</title>
+
+	<style type="text/css">
+
+	* {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: linear-gradient(45deg, #58B368, #333);
+        padding: 10px;
+        color: white;
+        position: sticky;
+        top: 0;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+    }
+
+    .nav-links li {
+        flex: 1;
+        text-align: center;
+        position: relative;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+    }
+
+    .nav-links a:hover {
+        background-color: #575757;
+        transition: background-color 0.3s;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-image: linear-gradient(45deg, #58B368, #333);
+        width: 100%;
+        text-align: left;
+        z-index: 1;
+        list-style: none;
+    }
+
+    .dropdown-content li {
+        width: 100%;
+    }
+
+    .dropdown-content a {
+        padding: 10px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .search-input {
+        padding: 5px;
+        border: none;
+        border-radius: 3px;
+        width: 0;
+        opacity: 0;
+        transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .search-button {
+        padding: 5px 10px;
+        border: none;
+        background-color: #575757;
+        color: white;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .search-container:hover .search-input {
+        width: 150px;
+        opacity: 1;
+    }
+		.image{
+			display: inline-block;
+			border: 1px solid blue;
+			margin: 10px;
+			width: 30%;
+		}
+		.image .description{
+			padding: 10px;
+			text-align: center;
+		}
+
+		.image:hover{
+			border: 5px solid black;
+		}
+
+		.image img{
+			width: 100%;
+			height: auto;
+		}
+
+		footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        width: 100%;
+        bottom: 0;
+    }
+
+	</style>
+</head>
+<body>
+	<nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="places.html">Places</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a href="contact.html">Contact</a>
+                <ul class="dropdown-content">
+                    <li><a href="manish.html">Manish Ghimire</a></li>
+                    <li><a href="nabina.html">Sita Karki</a></li>
+                    <li><a href="binod.html">Binod Chaudhary</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-input">
+            <button class="search-button">Search</button>
+        </div>
+    </nav>
+    
+	<div class="image">
+		<a target="blank" href="img/syambhu.png">
+		<img src="img/syambhu.png" alt="swyambhunath picture">
+		</a>
+		<div class="description">Swayambhunath Temple</div>
+	</div>
+
+	<div class="image">
+		<a target="blank" href="img/swayambhunathtemple.png">
+		<img src="img/swayambhunathtemple.png" alt="swyambhunath picture">
+		</a>
+		<div class="description">Swayambhunath Front View</div>
+	</div>
+
+	<div class="image">
+		<a target="blank" href="img/aerial-boudha.png">
+		<img src="img/aerial-boudha.png" alt="boudha picture">
+		</a>
+		<div class="description">Bouddha Air View</div>
+	</div>
+
+	<div class="image">
+		<a target="blank" href="img/boudha-old-photo.png">
+		<img src="img/boudha-old-photo.png" alt="boudha-old-photo">
+		</a>
+		<div class="description">Boudha Old Photo</div>
+	</div>
+
+	<div class="image">
+		<a target="blank" href="img/boudha-during-2015-earthquake.png">
+		<img src="img/boudha-during-2015-earthquake.png" alt="boudha-during-2015-earthquake">
+		</a>
+		<div class="description">boudha-during-2015-earthquake</div>
+	</div>
+
+	<div class="image">
+		<a target="blank" href="img/Shree.png">
+		<img src="img/Shree.png" alt="Shree-pancha-mahalaxmi-temple">
+		</a>
+		<div class="description">Shree-pancha-mahalaxmi-temple</div>
+	</div>
+
+	<div class="image">
+		<a target="blank" href="img/South-Indian-Architecture-Temple.png">
+		<img src="img/South-Indian-Architecture-Temple.png" alt="South-Indian-Architecture-Temple">
+		</a>
+		<div class="description">South-Indian-Architecture-Temple</div>
+	</div>
+
+	<div class="image">
+		<a target="blank" href="img/Main-Shree-Pancha-Mahalaxmi-Temple.png">
+		<img src="img/Main-Shree-Pancha-Mahalaxmi-Temple.png" alt="Main-Shree-Pancha-Mahalaxmi-Temple">
+		</a>
+		<div class="description">Main-Shree-Pancha-Mahalaxmi-Temple</div>
+	</div>
+
+	<div class="image">
+		<a target="blank" href="img/laxmimatastatueinsidesheeshmahal.png">
+		<img src="img/laxmimatastatueinsidesheeshmahal.png" alt="laxmi-mata-statue-inside-sheesh-mahal">
+		</a>
+		<div class="description">laxmi mata statue inside sheesh mahal</div>
+	</div>
+
+
+	<div class="image">
+		<a target="blank" href="img/front-side-of-Hayagrib-Cave.png">
+		<img src="img/front-side-of-Hayagrib-Cave.png" alt="front-side-of-Hayagrib-Cave">
+		</a>
+		<div class="description">front-side-of-Hayagrib-Cave</div>
+	</div>
+
+	<div class="image">
+		<a target="blank" href="img/monkeys.png">
+		<img src="img/monkeys.png" alt="Swyambhu's Monkeys">
+		</a>
+		<div class="description">Swyambhu's Monkeys</div>
+	</div>
+
+	<div class="image">
+		<a target="blank" href="img/panchakot-dham.png">
+		<img src="img/panchakot-dham.png" alt="panchakot-dham">
+		</a>
+		<div class="description">panchakot-dham</div>
+	</div>
+
+	<div class="image">
+		<a target="blank" href="img/Temple-Complex-at-Panchakot.png">
+		<img src="img/Temple-Complex-at-Panchakot.png" alt="Temple-Complex-at-Panchakot">
+		</a>
+		<div class="description">Temple-Complex-at-Panchakot</div>
+	</div>
+
+	<div class="image">
+		<a target="blank" href="img/sali-nadi-temple.png">
+		<img src="img/sali-nadi-temple.png" alt="sali-nadi-temple">
+		</a>
+		<div class="description">sali-nadi-temple</div>
+	</div>
+
+	<div class="image">
+		<a target="blank" href="img/Origin-of-Sali-Nadi-River.png">
+		<img src="img/Origin-of-Sali-Nadi-River.png" alt="Origin-of-Sali-Nadi-River">
+		</a>
+		<div class="description">Origin-of-Sali-Nadi-River</div>
+	</div>
+
+	<div class="image">
+		<a target="blank" href="img/crowd-during-swasthani-brata-katha.png">
+		<img src="img/crowd-during-swasthani-brata-katha.png" alt="crowd-during-swasthani-brata-katha">
+		</a>
+		<div class="description">crowd-during-swasthani-brata-katha</div>
+	</div>
+
+	<div class="image">
+		<a target="blank" href="img/architecture-of-sali-nadi-temple.png">
+		<img src="img/architecture-of-sali-nadi-temple.png" alt="architecture-of-sali-nadi-temple">
+		</a>
+		<div class="description">architecture-of-sali-nadi-temple</div>
+	</div>
+
+		
+
+ <footer>
+        <p>&copy; Group 5. All right reserved</p>
+        <a href="#top" class="fas fa-arrow-circle-up" style="font-size: 24px; color: red;"></a>
+    </footer>
+
+
+</body>
+</html>
